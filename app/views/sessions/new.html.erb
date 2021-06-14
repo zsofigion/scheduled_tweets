@@ -1,0 +1,23 @@
+<h1 class="my-3">Sign In</h1>
+
+<div class="card">
+  <div class="card-body">
+
+    <%= form_with url: sign_in_path do |form| %>
+
+        <div class="mb-3">
+            <%= form.label :email, class:"form-label" %>
+            <%= form.text_field :email, class:"form-control", placeholder:"scheduler@scheduler.com" %>
+        </div>
+        <div class="mb-3">
+            <%= form.label :password, class:"form-label" %>
+            <%= form.password_field :password, class:"form-control", placeholder:"password" %>
+            <%= link_to "Forgot your password?", password_reset_path, class:"btn btn-link" %>
+        </div>
+        <div class="mb-3">
+            <%= form.submit "Sign In", class:"btn btn-info" %>
+        </div>
+
+    <% end %>
+</div>
+</div>

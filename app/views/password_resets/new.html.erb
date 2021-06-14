@@ -1,0 +1,18 @@
+<h1>Forgor your password?</h1>
+
+<div class="card">
+  <div class="card-body">
+
+    <%= form_with url: password_reset_path do |form| %>
+        <div class="mb-3">
+            <%= form.label :email, class:"form-label" %>
+            <%= form.text_field :email, class:"form-control", placeholder:"scheduler@scheduler.com" %>
+        </div>
+        <div class="mb-3">
+            <%= form.submit "Reset Password", class:"btn btn-info" %>
+        </div>
+
+    <% end %>
+
+</div>
+</div>
